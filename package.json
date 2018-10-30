@@ -2,23 +2,22 @@
   "name": "github-status-travis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "cli.js",
+  "bin": {
+    "update-gh-status": "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:stage": "",
-    "test:stage2": ""
+    "test:stage": "./cli.js --context='deploy on now' --description='testing deployment' --state=success"
   },
   "dependencies": {
     "@octokit/rest": "15.15.1",
-    "args-parser": "1.1.0"
+    "commander": "2.19.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miduga/github-status-travis.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/miduga/github-status-travis/issues"
   },
